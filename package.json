@@ -7,7 +7,7 @@
         "type": "git",
         "url": "https://github.com/Paul-Passeron/tree-sitter-method-b"
     },
-    "main": "highlights.scm",
+    "main": "grammar.js",
     "dependencies": {},
     "devDependencies": {}
 }
