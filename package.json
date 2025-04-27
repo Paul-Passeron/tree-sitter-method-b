@@ -43,5 +43,10 @@
       "scope": "source.methodB",
       "injection-regex": "^methodB$"
     }
+  ],
+  "file-types": [
+    "mch",
+    "impl",
+    "res"
   ]
 }

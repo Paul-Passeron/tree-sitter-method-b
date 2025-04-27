@@ -1,5 +1,5 @@
 {
-  "name": "b",
+  "name": "methodb",
   "rules": {
     "source_file": {
       "type": "REPEAT1",
