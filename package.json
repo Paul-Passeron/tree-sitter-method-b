@@ -1,13 +1,47 @@
 {
-    "name": "tree-sitter-method-b",
-    "version": "0.1.0",
-    "description": "Tree-sitter grammar for B language",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Paul-Passeron/tree-sitter-method-b"
-    },
-    "main": "grammar.js",
-    "dependencies": {},
-    "devDependencies": {}
+  "name": "tree-sitter-method-b",
+  "version": "0.1.0",
+  "description": "Tree-sitter grammar for B language",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Paul-Passeron/tree-sitter-method-b"
+  },
+  "main": "grammar.js",
+  "types": "bindings/node",
+  "dependencies": {
+    "node-gyp-build": "^4.8.1"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.1"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "prebuildify": "^6.0.1"
+  },
+  "scripts": {
+    "install": "node-gyp-build",
+    "prestart": "tree-sitter build --wasm",
+    "start": "tree-sitter playground",
+    "test": "node --test bindings/node/*_test.js"
+  },
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**",
+    "*.wasm"
+  ],
+  "tree-sitter": [
+    {
+      "scope": "source.methodB",
+      "injection-regex": "^methodB$"
+    }
+  ]
 }
