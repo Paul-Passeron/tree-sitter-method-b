@@ -1,5 +1,5 @@
 module.exports = grammar({
-  name: "b",
+  name: "methodb",
 
   // skip ordinary whitespace
   extras: ($) => [/\s+/],
